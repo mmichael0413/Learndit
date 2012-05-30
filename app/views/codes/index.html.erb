@@ -1,0 +1,22 @@
+<table>
+	<tr>
+		<th>Snippet</th>
+		<th>Description</th>
+		<th></th>
+		<th></th>
+	</tr>
+
+<% @codes.each do |code| %>
+	<tr>
+		<td><%= code.content %></td>
+		<td><%= code.description %></td>
+		<td><%= link_to 'Show', code %></td>
+		<td><%= link_to 'Edit', edit_code_path(code) %></td>
+		<td><%= link_to 'Destroy', code, :confirm => 'Are you sure you want to delete your snippet?', :method => :delete %></td>
+	</tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Snippet', new_code_path %>

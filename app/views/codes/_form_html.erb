@@ -1,0 +1,17 @@
+<% form_for(@code) do |code_form| %>
+
+	<div class="field">
+		<%= code_form.label :content %><br />
+		<%= code_form.text_field :content %>
+	</div>
+	
+	<div class="field">
+		<%= code_form.label :description %><br />
+		<%= code_form.text_field :description %>
+	</div>
+
+	<div class="actions">
+		<%= code_form.submit %>
+	</div>
+
+<% end %>

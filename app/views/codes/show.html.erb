@@ -1,0 +1,15 @@
+<p>
+	<b>Snippet:</b>
+	<%= @code.content %>
+</p>
+
+<p>
+	<b>Description:</b>
+	<%= @code.description %>
+</p>
+
+<br/>
+
+<%= link_to 'Edit Snippet', edit_code_path(@code) %> |
+
+<%= link_to 'Back to Snippets', codes_path %>
