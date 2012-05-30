@@ -1,13 +1,13 @@
-<% form_for(@code) do |code_form| %>
+<%= form_for(@code) do |code_form| %>
 
 	<div class="field">
 		<%= code_form.label :content %><br />
-		<%= code_form.text_field :content %>
+		<%= code_form.text_area :content %>
 	</div>
 	
 	<div class="field">
 		<%= code_form.label :description %><br />
-		<%= code_form.text_field :description %>
+		<%= code_form.text_area :description %>
 	</div>
 
 	<div class="actions">
