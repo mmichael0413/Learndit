@@ -6,6 +6,7 @@ class Code < ActiveRecord::Base
   
   validates_presence_of :content, :description
   
+  #Method for a simple search form
   def self.search(search)
     if search
       where('content LIKE ?', "%#{search}%")

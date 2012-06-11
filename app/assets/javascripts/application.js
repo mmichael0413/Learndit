@@ -13,3 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function()) {
+	$("#codes th a").live("click", function() {
+		$.getScript(this.href);
+		return false;
+	});
+	$("#codes_search input").keyup(function() {
+		$.get($("#codes_search").attr("action"), $("#codes_search").serialize(), null, "script");
+		return false;
+	});
+});
