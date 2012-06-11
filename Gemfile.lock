@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    RedCloth (4.2.9)
     actionmailer (3.2.2)
       actionpack (= 3.2.2)
       mail (~> 2.4.0)
@@ -30,6 +31,7 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     builder (3.0.0)
+    coderay (1.0.6)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -107,6 +109,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  RedCloth
+  coderay
   coffee-rails (~> 3.2.1)
   jquery-rails
   pg
