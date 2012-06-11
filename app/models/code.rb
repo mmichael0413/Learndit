@@ -5,4 +5,13 @@ class Code < ActiveRecord::Base
   accepts_nested_attributes_for :tags
   
   validates_presence_of :content, :description
+  
+  def self.search(search)
+    if search
+      where('content LIKE ?', "%#{search}%")
+    else
+      scoped
+    end
+    
+  end
 end

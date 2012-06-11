@@ -1,3 +1,12 @@
+<h1>Code Snippets</h1>
+
+<%= form_tag codes_path, :method => 'get' do %>
+	<p>
+		<%= text_field_tag :search, params[:search] %>
+		<%= submit_tag "Search", :name => nil %>
+	</p>
+<% end %>
+
 <table>
 	<tr>
 		<th>Snippet</th>
