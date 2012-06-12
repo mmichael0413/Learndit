@@ -9,7 +9,7 @@ class Code < ActiveRecord::Base
   #Method for a simple search form
   def self.search(search)
     if search
-      where('content LIKE ?', "%#{search}%")
+      where('description LIKE ?', "%#{search}%")
     else
       scoped
     end

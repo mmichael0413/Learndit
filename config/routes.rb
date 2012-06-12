@@ -3,7 +3,11 @@ Learndit::Application.routes.draw do
   
   root :to => 'home#index'
   
-  resources :codes
+  resources :codes do
+    collection do
+      get 'view'
+    end
+  end
   resources :tags
   resources :tag_joins
 

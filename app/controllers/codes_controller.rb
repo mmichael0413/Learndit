@@ -2,11 +2,6 @@ class CodesController < ApplicationController
 
   def index
     @codes = Code.search(params[:search])
-    
-    respond_to do |format|
-      format.html #index.html.erb
-      format.xml { render :xml => @codes }
-    end
   end
 
   def show
@@ -16,6 +11,10 @@ class CodesController < ApplicationController
       format.html # show.html.erb
       format.xml  { render :xml => @code }
     end
+  end
+  
+  def view
+    @code = Code.find(params[:id])
   end
 
   def new

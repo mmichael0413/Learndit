@@ -1,0 +1,9 @@
+<table>
+<% @codes.each do |code| %>
+	<tr>
+		<td><%= link_to code.description, {:controller => "codes", :action => "view", :id => code.id}, :remote => true %>
+			<div class="code<%= code.id %>"></div>
+		</td>
+	</tr>
+<% end %>
+</table>

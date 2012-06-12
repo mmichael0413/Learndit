@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require_tree .
 
-$(function()) {
+$(function() {
 	$("#codes th a").live("click", function() {
 		$.getScript(this.href);
 		return false;
