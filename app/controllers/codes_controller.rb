@@ -6,6 +6,7 @@ class CodesController < ApplicationController
 
   def show
     @code = Code.find(params[:id])
+    @tag = @code.tags
   
     respond_to do |format|
       format.html # show.html.erb
@@ -19,6 +20,7 @@ class CodesController < ApplicationController
 
   def new
     @code = Code.new
+    @code.tags.build
   
     respond_to do |format|
       format.html # new.html.erb

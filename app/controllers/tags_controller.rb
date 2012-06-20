@@ -4,7 +4,6 @@ class TagsController < ApplicationController
     
     respond_to do |format|
       if @tag.save
-       
         format.html { redirect_to(@tag,
                       :notice => 'Tag was successfully created.') }
         format.xml  { render :xml => @tag,

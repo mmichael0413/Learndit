@@ -1,13 +1,22 @@
 <%= form_for(@code) do |code_form| %>
 
 	<div class="field">
-		<%= code_form.label :content %><br />
+		<%= code_form.label :content, "Snippet" %><br />
 		<%= code_form.text_area :content %>
 	</div>
 	
 	<div class="field">
 		<%= code_form.label :description %><br />
 		<%= code_form.text_area :description %>
+	</div>
+	
+	<div class="field">
+		<%= code_form.fields_for :tags do |builder| %>
+			<%= builder.label :name, "Add a Tag" %><br/>
+			<%= builder.text_field :name %><br/>
+			<%= builder.check_box :_destroy %>
+			<%= builder.label :_destroy, "Delete Tag" %>
+		<% end %>
 	</div>
 
 	<div class="actions">
