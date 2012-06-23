@@ -10,7 +10,9 @@
 
 <p>
 	<b>Tags:</b>
-	<%= @tag.name %>
+	<% @code.tags.each do |tag| %>
+		<%= tag.name %><br/>
+	<% end %>
 </p>
 
 <br/>

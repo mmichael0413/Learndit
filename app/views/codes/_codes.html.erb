@@ -4,6 +4,10 @@
 		<td><%= link_to code.description, {:controller => "codes", :action => "view", :id => code.id}, :remote => true %>
 			<div class="code<%= code.id %>"></div>
 		</td>
+		<td><% code.tags.each do |tag| %>
+				<%= tag.name %><br/>
+			<% end %>
+		</td>
 	</tr>
 <% end %>
 </table>
