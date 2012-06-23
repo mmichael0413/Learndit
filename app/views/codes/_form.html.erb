@@ -12,10 +12,7 @@
 	
 	<div class="field">
 		<%= code_form.fields_for :tags do |builder| %>
-			<%= builder.label :name, "Add a Tag" %><br/>
-			<%= builder.text_field :name %><br/>
-			<%= builder.check_box :_destroy %>
-			<%= builder.label :_destroy, "Delete Tag" %>
+			<%= render 'tag_fields', :code_form => builder %>
 		<% end %>
 	</div>
 

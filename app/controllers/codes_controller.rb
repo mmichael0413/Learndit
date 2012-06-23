@@ -19,7 +19,7 @@ class CodesController < ApplicationController
 
   def new
     @code = Code.new
-    @code.tag.build
+    @code.tags.build
   
     respond_to do |format|
       format.html # new.html.erb

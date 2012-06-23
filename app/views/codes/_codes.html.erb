@@ -2,6 +2,7 @@
 <% @codes.each do |code| %>
 	<tr>
 		<td><%= link_to code.description, {:controller => "codes", :action => "view", :id => code.id}, :remote => true %>
+			<%= link_to "edit", edit_code_path(code) %>
 			<div class="code<%= code.id %>"></div>
 		</td>
 		<td><% code.tags.each do |tag| %>
